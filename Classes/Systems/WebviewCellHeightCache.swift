@@ -21,8 +21,7 @@ final class WebviewCellHeightCache: IssueCommentHtmlCellDelegate {
     // MARK: Public API
 
     func height(model: IssueCommentHtmlModel, width: CGFloat) -> CGFloat {
-        return WebviewCellHeightCache.cache.data(key: model.html, width: width)?.height
-            ?? Styles.Sizes.tableCellHeight
+        return WebviewCellHeightCache.cache.data(key: model.html, width: width)?.height ?? 0
     }
 
     // MARK: IssueCommentHtmlCellDelegate
